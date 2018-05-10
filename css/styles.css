@@ -1,0 +1,141 @@
+/* Styles the body tag with a background and specifies background attributes */
+body {
+  background-image: url(../images/background.jpg);
+  background-position: 100%;
+  background-color: #EFF1C5;
+  background-blend-mode: overlay;
+}
+
+/* Naming convention for grid items: line 10-33 */
+.header {
+  grid-area: header;
+  background-color: #BDBEA9;
+}
+
+.education {
+  grid-area: education;
+}
+
+.about {
+  grid-area: about;
+}
+
+.reference {
+  grid-area: references;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.hobbies {
+  grid-area: hobbies;
+}
+
+/* Styles the class:container tag with grid and space attributes*/
+.container {
+  display: grid;
+  /* grid-template-areas: 'header header header header'
+                       'education education about about'
+                       'education education about about'
+                       'education education skills skills'
+                       'references references skills skills'
+                       'hobbies hobbies skills skills'; */
+  grid-template-areas: 'header header header'
+                       'about about about'
+                       'education education education'
+                       'skills skills skills'
+                       'hobbies hobbies hobbies'
+                       'references references references';
+  margin: 0 auto;
+  margin-top: 2%;
+  width: 50%;
+  height: 100vh;
+  grid-template-columns: 60% 1fr 1fr;
+  grid-gap: 1%;
+}
+
+/* Specifies style for grid cells with background color, padding and font family */
+.box {
+  background-color: #EFF1C5;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-family: 'Monsteratt' ,sans-serif;
+}
+
+/* Class:inline to specify inline-block display */
+.inline {
+  display: inline-block;
+  width: 10%;
+}
+
+/* Specifies style for small font size */
+.small-font {
+  font-size: 0.8em
+}
+
+/* Specifies style for bold fonts */
+.bold-font {
+  font-weight: bold;
+}
+
+/* Styles the id:profile (in header tag html) with size and spacing attributes */
+#profile {
+  height: 150px;
+  width: 150px;
+  position: relative;
+  top: 15%;
+  bottom: 10%;
+}
+
+/* Styles header and footer tag with postion attributes */
+header {
+  position: relative;
+  left: 2%;
+}
+
+footer {
+  position: sticky;
+  top: 160%;
+}
+
+.contact {
+  position: relative;
+  left: 1%;
+  list-style: none;
+}
+
+/* Specifies icons for contact details (in header tag html): line 109-118 */
+#phone {
+  list-style-image: url(../images/cell-phone.png);
+  position: relative;
+  bottom: 15px;
+}
+
+#mail {
+  list-style-image: url(../images/mail.png);
+  position: relative;
+  bottom: 15px;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {
+   width: 80vw;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 80vw;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 80vw;
+  }
+}
